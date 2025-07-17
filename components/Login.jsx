@@ -9,7 +9,9 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setUser({ username, pass });
+    if (username !== "" && pass !== "") {
+      setUser({ username, pass });
+    }
   };
   return (
     <div>
